@@ -12,14 +12,14 @@ module.exports ={
         throw err
       }
       else{
-        res.send(newArticle)
+        res.json(newArticle)
       }
     })
   },
   show: function(req,res){
     Article.find({userid:req.params.id},function(err,article){
       if(article){
-        res.send(article)
+        res.json(article)
       }
     })
   },
@@ -36,7 +36,7 @@ module.exports ={
           throw err
         }
         else{
-          res.send(article)
+          res.json(article)
         }
       })
     }
