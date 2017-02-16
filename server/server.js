@@ -7,9 +7,8 @@ var user = require('./routes/users.js');
 var article = require('./routes/articles.js');
 var mongoose = require('mongoose');
 //mongoose connection to mongodb
-mongoose.Promise = global.Promise
 mongoose.connect('mongodb://localhost/article');
-
+mongoose.Promise = global.Promise
 
 
 app.use(cors());
