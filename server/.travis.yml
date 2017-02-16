@@ -5,5 +5,5 @@ before_script:
   - npm install
   - npm install -g mocha
 script:
-  - node server/server.js
+  - node server/server.js 
   - mocha
