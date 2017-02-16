@@ -21,7 +21,7 @@ describe('tes routing user',function(){
     })
   })
   it('should return empty object when delete /users/delete/id',function(done){
-    chai.request('http://localhost:3000').delete(`/users/delete/123`).end(function (err, res) {
+    chai.request('http://localhost:3000').delete('/users/delete/123').end(function (err, res) {
     res.text.should.equal('user deleted')
     done()
     })
