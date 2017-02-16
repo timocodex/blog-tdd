@@ -42,7 +42,7 @@ module.exports ={
     User.findOneAndRemove({username:req.params.id}, function(err) {
         if (err) throw err;
 
-      res.send(`user deleted`);
+      res.send("user deleted");
     });
   }
 

@@ -46,7 +46,7 @@ module.exports ={
     Article.findOneAndRemove({_id:req.params.id}, function(err) {
         if (err) throw err;
 
-      res.send(`story deleted`);
+      res.send("story deleted");
     });
   }
 }

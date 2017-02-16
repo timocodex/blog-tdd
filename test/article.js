@@ -19,13 +19,13 @@ describe('tes routing article',function(){
     })
   })
   it('should return user json when get /articles/update',function(done){
-    chai.request('http://localhost:3000').put(`/articles/update/${tampung}`).send({story: 'kisah anak diberi ubat cabut lari' }).end(function (err, res) {
+    chai.request('http://localhost:3000').put('/articles/update/'+tampung).send({story: 'kisah anak diberi ubat cabut lari' }).end(function (err, res) {
     res.body.should.have.deep.property('story','kisah anak diberi ubat cabut lari')
     done()
     })
   })
   it('should return empty object when delete /articles/delete/id',function(done){
-    chai.request('http://localhost:3000').delete(`/articles/delete/${tampung}`).end(function (err, res) {
+    chai.request('http://localhost:3000').delete('/articles/delete/'+tampung).end(function (err, res) {
     res.text.should.equal('story deleted')
     done()
     })
