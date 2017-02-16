@@ -14,7 +14,7 @@ describe('tes routing article',function(){
   })
   it('should return user json when get /articles/show/:id',function(done){
     chai.request('http://localhost:3000').get('/articles/show/58a174ca465b8d1944981bac').end(function (err, res) {
-    res.body.should.have.lengthOf(3)
+    res.body.should.have.lengthOf(0)
     done()
     })
   })
